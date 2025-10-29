@@ -59,6 +59,9 @@ Feature: Login form validation on saucedemo.com
       | standard_user     | secret_SAUCE     | Boundary:  Password Case Sensitivity                        |
       | standard_USER     | secret_sauce     | Boundary:  Username Case Sensitivity                        |
       | standard_USER     | secret_SAUCE     | Boundary:  Username and Password Case Sensitivity           |
+      | '  standard_user' | secret_sauce     | Boundary: Leading/tailing Trim in Username                  |
+      | standard_user     | '  secret_sauce' | Boundary: Leading/tailing Trim in Password                  |
+      | 'standard_user '  | 'secret_sauce '  | Boundary: Leading/tailing Trim in Password and Username     |
 
   Scenario: UC-6 Unsuccessful Login: Account is locked out
     Given the user is on the login page

@@ -31,16 +31,16 @@ class LoginPage extends Page {
   }
 
   async clearField(fieldName) {
-    const field = this.getFieldElement(fieldName);
+    const field =  this.getFieldElement(fieldName);
     const value = await field.getValue();
       for (let i = 0; i < value.length; i++) {
         await browser.keys("Backspace");
       }
   }
 
-    async login(username, password) {
-    await this.enterValueInField("Username", username);
-    await this.enterValueInField("Password", password);
+  async login(username, password) {
+    await this.enterValueInField("Username", username.replaceAll("'", ""));
+    await this.enterValueInField("Password", password.replaceAll("'", ""));
     await this.loginButton.click();
   }
 
