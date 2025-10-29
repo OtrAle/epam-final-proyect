@@ -3,7 +3,6 @@
 This repository contains an **End-to-End (E2E)** automation suite focused on testing the **Login functionality** of the [Saucedemo](https://www.saucedemo.com/) application.  
 It uses **WebdriverIO** with **Cucumber (BDD)** and follows the **Page Object Model (POM)** structure for clarity and scalability.
 
----
 
 ## Key Features
 
@@ -12,14 +11,12 @@ It uses **WebdriverIO** with **Cucumber (BDD)** and follows the **Page Object Mo
 - **Cross-browser execution:** Configured for Chrome, Firefox, and Edge.  
 - **Validation coverage:** Handles both positive and negative login scenarios with robust input handling.
 
----
 
 ## Requirements
 
 - Node.js
 - npm 
 - Git  
----
 
 ## Required browsers
 
@@ -27,7 +24,7 @@ It uses **WebdriverIO** with **Cucumber (BDD)** and follows the **Page Object Mo
 - Mozilla Firefox  
 - Microsoft Edge  
 
----
+
 
 ## Installation
 
@@ -37,7 +34,6 @@ cd final-project
 npm install
 ```
 
----
 
 ## Execution Commands
 
@@ -47,7 +43,6 @@ Run from the project root directory:
 |----------|-------------|
 | `npm run wdio` | Runs all login tests across all configured browsers. |
 
----
 
 ## Project Structure
 
@@ -59,7 +54,6 @@ Run from the project root directory:
 | `wdio.conf.js` | WebdriverIO configuration file. |
 | `package.json` | Dependencies and npm scripts. |
 
----
 
 ##  Test Scenarios Covered
 - ✅ **Successful login** with valid credentials (standard, problem, error, visual users)  
