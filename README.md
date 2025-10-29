@@ -32,7 +32,7 @@ It uses **WebdriverIO** with **Cucumber (BDD)** and follows the **Page Object Mo
 ## Installation
 
 ```bash
-git clone https://github.com/OtrAle/epam-final-proyect.git
+git clone https://github.com/OtrAle/epam-final-proyect
 cd final-project
 npm install
 ```
