@@ -10,9 +10,10 @@ class InventoryPage extends Page {
 
   async open() {
         await super.open('/inventory.html');
+        await expect(await this.getCurrentPath()).toEqual(this.expectedPath);
     }
 
-    get expectedPath() {
+  get expectedPath() {
         return '/inventory.html';; 
     }
 }

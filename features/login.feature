@@ -3,7 +3,7 @@ Feature: Login form validation on saucedemo.com
   Scenario Outline: UC-1 Successful login: Valid credentials
     Given the user is on the login page
     When the user logs in with username "<username>" and password "<password>"
-    Then the user is redirected to the dashboard
+    Then the user is redirected to the inventory page
     And the inventory container is visible on the page
 
     Examples:
