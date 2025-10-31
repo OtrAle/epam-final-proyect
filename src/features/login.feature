@@ -1,5 +1,7 @@
+@regression
 Feature: Login form validation on saucedemo.com
 
+  @smoke
   Scenario Outline: UC-1 Successful login: Valid credentials
     Given the user is on the login page
     When the user logs in with username "<username>" and password "<password>"
@@ -13,6 +15,7 @@ Feature: Login form validation on saucedemo.com
       | error_user              | secret_sauce | **Fails during the Checkout** |
       | visual_user             | secret_sauce | **Visual issues**             |
 
+  @negative
   Scenario: UC-2 Unsuccessful Login: Both Username and Password fields cleared
     Given the user is on the login page
     When the user enters "any_user" in the "Username" field
@@ -24,6 +27,7 @@ Feature: Login form validation on saucedemo.com
       And the error message contains the text "Epic sadface: Username is required"
       And the user remains on the login page
 
+  @negative
   Scenario: UC-3 Unsuccessful Login: Password field cleared
     Given the user is on the login page
     When the user enters "any_user" in the "Username" field
@@ -34,6 +38,7 @@ Feature: Login form validation on saucedemo.com
       And the error message contains the text "Epic sadface: Password is required"
       And the user remains on the login page
 
+  @negative
   Scenario: UC-4 Unsuccessful Login: Username field cleared
     Given the user is on the login page
     When the user enters "any_user" in the "Username" field
@@ -44,6 +49,7 @@ Feature: Login form validation on saucedemo.com
       And the error message contains the text "Epic sadface: Username is required"
       And the user remains on the login page
 
+  @negative
   Scenario Outline: UC-5 Unsuccessful Login: Invalid credentials combinations
     Given the user is on the login page
     When the user logs in with username "<username>" and password "<password>"
@@ -63,6 +69,7 @@ Feature: Login form validation on saucedemo.com
       | standard_user     | '  secret_sauce' | Boundary: Leading/tailing Trim in Password                  |
       | 'standard_user '  | 'secret_sauce '  | Boundary: Leading/tailing Trim in Password and Username     |
 
+  @negative
   Scenario: UC-6 Unsuccessful Login: Account is locked out
     Given the user is on the login page
     When the user logs in with username "locked_out_user" and password "secret_sauce"

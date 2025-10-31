@@ -41,6 +41,9 @@ Run from the project root directory:
 | Command | Description |
 |----------|-------------|
 | `npm run wdio` | Runs all login tests across all configured browsers. |
+| `npm run test:smoke` | Runs test with the tag "smoke" |
+| `npm run test:regression` | Runs test with the tag "regression" |
+| `npm run test:negative` | Runs test with the tag "negative" |
 
 
 ## Project Structure

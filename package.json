@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "wdio": "wdio run ./src/config/wdio.conf.js"
+    "wdio": "wdio run ./src/config/wdio.conf.js",
+    "test:smoke": "npx wdio run ./src/config/wdio.conf.js --cucumberOpts.tags '@smoke'",
+    "test:regression": "npx wdio run ./src/config/wdio.conf.js --cucumberOpts.tags '@regression'",
+    "test:negative": "npx wdio run ./src/config/wdio.conf.js --cucumberOpts.tags '@negative'"
+
   },
   "keywords": [],
   "author": "",
