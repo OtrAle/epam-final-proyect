@@ -48,9 +48,9 @@ Run from the project root directory:
 | Path | Purpose |
 |------|----------|
 | `/features/login.feature` | Contains the Gherkin scenarios for Login validation. |
-| `/features/step-definitions/login.steps.js` | Step definitions implementing the login logic. |
+| `/stepdefinitions/login.steps.js` | Step definitions implementing the login logic. |
 | `/pageobjects/Login.page.js` | Page Object for selectors and login-related actions. |
-| `wdio.conf.js` | WebdriverIO configuration file. |
+| `/config/wdio.conf.js` | WebdriverIO configuration file. |
 | `package.json` | Dependencies and npm scripts. |
 
 
